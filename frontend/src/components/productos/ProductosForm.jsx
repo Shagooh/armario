@@ -120,7 +120,7 @@ const handleSubmit = async(e)=>{
 
         <div className="mb-3">
           <label htmlFor="exampleFormControlInput6" className="form-label">
-          <strong>Link imagen</strong>
+          <strong>Imagen</strong>
           </label>
           <input
             type="text"
@@ -130,6 +130,15 @@ const handleSubmit = async(e)=>{
                       value={img}
             onChange={(e) => setImg(e.target.value)}
             style={{ background: "#fff3" , border: "none"}}
+          />
+          <input
+            type="file"
+            className="form-control"
+            id="exampleFormControlInput6"
+                      placeholder="Ingresa link de la imagen"
+                      value={img}
+            onChange={(e) => setImg(e.target.value)}
+            style={{ background: "#fff3" , border: "groove"}}
           />
         </div>
 
