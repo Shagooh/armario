@@ -56,7 +56,7 @@ const ProductosList = () => {
         return (
             
           <div className="mb-5" key={producto.id} style={{ textAlign: "center", width: 250 }}>
-          <img src={producto.img} className="card-img-top img-fluid" alt="..." />
+          <img src={producto.img} className="card-img-top img-fluid" alt="..." style={{ borderRadius: 66 }}/>
           <div className="card-body mb-3">
             <div />
             <h5 className="card-title">{producto.titulo}</h5>

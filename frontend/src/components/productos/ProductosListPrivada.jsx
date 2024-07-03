@@ -59,6 +59,7 @@ const ProductosListPrivada = () => {
               src={producto.img}
               className="card-img-top img-fluid"
               alt="..."
+              style={{ borderRadius: 66 }}
             />
             <div className="card-body mb-3">
               <div />
