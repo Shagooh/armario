@@ -64,9 +64,6 @@ const ProductosListPrivada = () => {
             <div className="card-body mb-3">
               <div />
               <h5 className="card-title">{producto.titulo}</h5>
-              <p className="card-text">
-                <strong>Descripcion:</strong> {producto.descripcion}
-              </p>
               <p className="card-text">Precio: {producto.price}</p>
               <p className="card-text">Stock: {producto.cantidad}</p>
 
