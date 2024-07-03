@@ -63,12 +63,12 @@ const ProductosList = () => {
             <p className="card-text">
               <strong>Descripcion:</strong> {producto.descripcion}
             </p>
-            <p className="card-text">Precio: {producto.price}</p>
-            <p className="card-text">Stock: {producto.cantidad}</p>
+            <p className="card-text"><strong>Precio:</strong> {producto.price}</p>
+            <p className="card-text"><strong>Stock:</strong> {producto.cantidad}</p>
             <Link style={{ background: "#64467e" , border: "none"}}
               to={`producto/${producto.id}`}
               className="btn btn-primary m-3 rounded-xl"
-            >Caracteristicas</Link>
+            ><strong>Características:</strong></Link>
             <button className="btn btn-primary m-3" style={{ background: "#ff86c3", border: "none" }} >Contactar</button>
            
           </div>
