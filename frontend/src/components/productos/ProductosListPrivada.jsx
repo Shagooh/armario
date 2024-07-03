@@ -50,7 +50,7 @@ const ProductosListPrivada = () => {
 
   return (
     <>
-      <h1 className="text-center mt-5" style={{ color: "#5B1B68" }}>Lista de Productos</h1>
+      <h1 className="text-center mt-5 mb-5" style={{ color: "#5B1B68" }}>Lista de Productos</h1>
       <div className=" container mx-auto gap-10 grid-productos text-center">
       {productos.map((producto) => {
         return (

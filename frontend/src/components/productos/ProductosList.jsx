@@ -50,7 +50,7 @@ const ProductosList = () => {
 
   return (
     <>
-      <h1 className="text-center mt-5" style={{ color: "#5B1B68" }}>Lista de Productos</h1>
+      <h1 className="text-center mt-5 mb-5" style={{ color: "#5B1B68" }}>Lista de Productos</h1>
       <div className=" container mx-auto gap-10 grid-productos text-center">
       {productos.map((producto) => {
         return (
@@ -60,7 +60,7 @@ const ProductosList = () => {
           <div className="card-body mb-3">
             <div />
             <h5 className="card-title">{producto.titulo}</h5>
-            <p className="card-text"><strong>Precio:</strong> ${producto.price}</p>
+            <p className="card-text"><strong>${producto.price}</strong> </p>
             <p className="card-text"><strong>Stock:</strong> {producto.cantidad}</p>
             <Link style={{ background: "#64467e" , border: "none"}}
               to={`producto/${producto.id}`}
