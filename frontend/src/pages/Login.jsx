@@ -10,7 +10,7 @@ const LoginPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await loginWithEmailAndPassword(email, password);
-    alert(response?.message || "Something went wrong");
+    alert(response?.message || "Algo ha salido mal");
   };
 
   return (

@@ -59,7 +59,7 @@ const createUser = async (req, res) => {
   try {
     const { nombre, email, contrasena } = req.body;
     const consulta = await model.createUsuarios(nombre, email, contrasena);
-    res.send("usuario agregado");
+    res.send("Usuario agregado");
   } catch (error) {
     console.log(error);
   }

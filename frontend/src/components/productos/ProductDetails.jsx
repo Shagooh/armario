@@ -26,10 +26,10 @@ const ProductDetails = () => {
 
   if (!producto) {
     return <div>Loading...</div>;
+    
   }
-
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 pt-5">
     <div className="row">
       <div className="col-md-6">
         <img src={producto.img} alt={producto.titulo} className="img-fluid rounded shadow" />

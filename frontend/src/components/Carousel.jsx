@@ -1,7 +1,7 @@
 const Carousel = () => {
   return (
     <div style={{ width: '100%', padding: "100px" }}>
-      <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel" style={{ width: '1000px', margin: '0 auto' }}>
+      <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel" >
         <div className="carousel-indicators">
           <button
             type="button"
@@ -28,7 +28,7 @@ const Carousel = () => {
           <div className="carousel-item active">
             <img 
               src="imgs/Banner2.png"
-              className="d-block"
+              className="d-block w-100"
               alt="..."
               style={{ width: "1000px", height: "400px"}} 
             />
@@ -36,7 +36,7 @@ const Carousel = () => {
           <div className="carousel-item">
             <img 
               src="imgs/Banner1.png" 
-              className="d-block" 
+              className="d-block w-100" 
               alt="..."  
               style={{ width: "1000px", height: "400px" }}
             />
@@ -44,7 +44,7 @@ const Carousel = () => {
           <div className="carousel-item">
             <img 
               src="imgs/Banner3.png" 
-              className="d-block" 
+              className="d-block w-100" 
               alt="..." 
               style={{ width: "1000px", height: "400px" }}
             />

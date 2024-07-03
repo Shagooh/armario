@@ -10,7 +10,7 @@ const RegisterPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await registerWithEmailAndPassword(email, password);
-    alert(response?.message || "Something went wrong");
+    alert(response?.message || "Algo ha salido mal");
   };
 
   return (
