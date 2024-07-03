@@ -44,35 +44,37 @@ const handleSubmit = async(e)=>{
       
         <div className="mb-3">
           <label htmlFor="exampleFormControlInput2" className="form-label">
-            Titulo
+          <strong>Titulo</strong>
           </label>
           <input
             type="text"
             className="form-control"
             id="exampleFormControlInput2"
-                      placeholder="Ej. Ingresa titulo"
+                      placeholder="Ingresa titulo"
                       value={titulo}
             onChange={(e) => setTitulo(e.target.value)}
+            style={{ background: "#fff3" , border: "none"}}
           />
         </div>
 
         <div className="mb-3">
           <label htmlFor="exampleFormControlInput3" className="form-label">
-            Descripción
+          <strong>Descripción</strong>
           </label>
           <input
             type="text"
             className="form-control"
             id="exampleFormControlInput3"
-                      placeholder="Ej. Ingresa descripción"
+                      placeholder="Ingresa descripción"
                       value={descripcion}
             onChange={(e) => setDescripcion(e.target.value)}
+            style={{ background: "#fff3" , border: "none"}}
           />
         </div>
 
         <div className="mb-3">
           <label htmlFor="exampleFormControlInput4" className="form-label">
-          Caracteristicas
+          <strong>Características</strong>
           </label>
           <input
             type="text"
@@ -81,12 +83,13 @@ const handleSubmit = async(e)=>{
                       placeholder="Ingresa caracteristicas"
                       value={caracteristicas}
             onChange={(e) => setCaracteristicas(e.target.value)}
+            style={{ background: "#fff3" , border: "none"}}
           />
         </div>
 
         <div className="mb-3">
           <label htmlFor="exampleFormControlInput5" className="form-label">
-            Cantidad
+            <strong>Cantidad</strong>
           </label>
           <input
             type="text"
@@ -95,13 +98,14 @@ const handleSubmit = async(e)=>{
                       placeholder="Ingresa cantidad"
                       value={cantidad}
             onChange={(e) => setCantidad(e.target.value)}
+            style={{ background: "#fff3" , border: "none"}}
           />
         </div>
 
         
         <div className="mb-3">
           <label htmlFor="exampleFormControlInput7" className="form-label">
-            Precio
+          <strong>Precio</strong>
           </label>
           <input
             type="text"
@@ -110,12 +114,13 @@ const handleSubmit = async(e)=>{
                       placeholder="Valor"
                       value={price}
             onChange={(e) => setPrice(e.target.value)}
+            style={{ background: "#fff3" , border: "none"}}
           />
         </div>
 
         <div className="mb-3">
           <label htmlFor="exampleFormControlInput6" className="form-label">
-            Link imagen
+          <strong>Link imagen</strong>
           </label>
           <input
             type="text"
@@ -124,13 +129,14 @@ const handleSubmit = async(e)=>{
                       placeholder="Ingresa link de la imagen"
                       value={img}
             onChange={(e) => setImg(e.target.value)}
+            style={{ background: "#fff3" , border: "none"}}
           />
         </div>
 
 
         <div className="mb-3">
           <label htmlFor="exampleFormControlInput7" className="form-label">
-            Usuario
+          <strong>Usuario</strong>
           </label>
           <input
             type="text"
@@ -139,11 +145,12 @@ const handleSubmit = async(e)=>{
                       placeholder="Ingresa Usuario"
                       value={usuario_id}
             onChange={(e) => setUsuario_id(e.target.value)}
+            style={{ background: "#fff3" , border: "none"}}
           />
         </div>
 
 
-        <button className="btn btn-primary">Agregar Producto</button>
+        <button className="btn btn-primary" style={{ background: "#64467e" , border: "none"}}>Agregar Producto</button>
       </form>
     </div>
   );
