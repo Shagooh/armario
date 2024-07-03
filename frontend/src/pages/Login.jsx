@@ -27,7 +27,8 @@ const LoginPage = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="form-control"
-            placeholder="Enter your email"
+            placeholder="Ingresa tu email"
+            style={{ background: "#fff3" , border: "none"}}
           />
         </div>
         <div className="mb-3" >
@@ -40,7 +41,8 @@ const LoginPage = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="form-control"
-            placeholder="Enter your password"
+            placeholder="Ingresa tu contraseña"
+            style={{ background: "#fff3" , border: "none"}}
           />
         </div>
         <button type="submit" className="btn btn-primary" style={{ background: "#64467e" , border: "none"}} >
