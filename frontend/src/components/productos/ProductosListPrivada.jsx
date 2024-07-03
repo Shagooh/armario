@@ -4,7 +4,7 @@ import "./ProductosList.css";
 
 const BASE_URL = import.meta.env.VITE_BASE_URL;
 
-const urlBase = "http://localhost:3000/productos/productos";
+//const urlBase = "http://localhost:3000/productos/productos";
 const ProductosListPrivada = () => {
   const [allProductos, setAllProductos] = useState([]);
   const [productos, setProductos] = useState([]);
@@ -54,37 +54,41 @@ const ProductosListPrivada = () => {
       <div className=" container mx-auto gap-10 grid-productos text-center">
       {productos.map((producto) => {
         return (
-            
-                <div className="mb-5" key={producto.id} style={{ width: 250 }}>
-                  <img src={producto.img} className="card-img-top img-fluid" alt="..." />
-                  <div className="card-body mb-3">
-                    <div />
-                    <h5 className="card-title">{producto.titulo}</h5>
-                    <p className="card-text">
-                      <strong>Descripcion:</strong> {producto.descripcion}
-                    </p>
-                    <p className="card-text">Precio: {producto.price}</p>
-                    <p className="card-text">Stock: {producto.cantidad}</p>
-                  
-                    <Link to={`/producto/${producto.id}`} className="btn btn-primary m-3 rounded-xl">
+          <div className="mb-5" key={producto.id} style={{ width: 250 }}>
+            <img
+              src={producto.img}
+              className="card-img-top img-fluid"
+              alt="..."
+            />
+            <div className="card-body mb-3">
+              <div />
+              <h5 className="card-title">{producto.titulo}</h5>
+              <p className="card-text">
+                <strong>Descripcion:</strong> {producto.descripcion}
+              </p>
+              <p className="card-text">Precio: {producto.price}</p>
+              <p className="card-text">Stock: {producto.cantidad}</p>
+
+              <Link
+                to={`/producto/${producto.id}`}
+                className="btn btn-primary m-3 rounded-xl"
+              >
                 Caracteristicas
               </Link>
-                    <button className="btn btn-primary m-3">Contactar</button>
-                    <button
-                      className="btn btn-primary m-3"
-                      onClick={() => handleDelete(producto.id)}
-                    >
-                      Editar
-                    </button>
-                    <button
-                      className="btn btn-danger"
-                      onClick={() => handleDelete(producto.id)}
-                    >
-                      Eliminar
-                    </button>
-                  </div>
-                </div>
-              
+              <button
+                className="btn btn-primary m-3"
+                onClick={() => alert("no puedes editar")}
+              >
+                Editar
+              </button>
+              <button
+                className="btn btn-danger"
+                onClick={() => handleDelete(producto.id)}
+              >
+                Eliminar
+              </button>
+            </div>
+          </div>
         );
       })}
       </div>

@@ -4,7 +4,7 @@ import "./ProductosList.css";
 
 const BASE_URL = import.meta.env.VITE_BASE_URL;
 
-const urlBase = "http://localhost:3000/productos/productos";
+//const urlBase = "http://localhost:3000/productos/productos";
 const ProductosList = () => {
   const [allProductos, setAllProductos] = useState([]);
   const [productos, setProductos] = useState([]);
@@ -65,7 +65,7 @@ const ProductosList = () => {
             <Link style={{ background: "#64467e" , border: "none"}}
               to={`producto/${producto.id}`}
               className="btn btn-primary m-3 rounded-xl"
-            ><strong>Características:</strong></Link>
+            ><strong>Características</strong></Link>
             <button className="btn btn-primary m-3" style={{ background: "#ff86c3", border: "none" }} >Contactar</button>
            
           </div>
