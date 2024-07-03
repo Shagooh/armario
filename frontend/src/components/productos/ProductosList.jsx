@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import "./ProductosList.css";
 
+const BASE_URL = import.meta.env.VITE_BASE_URL;
+
 const urlBase = "http://localhost:3000/productos/productos";
 const ProductosList = () => {
   const [allProductos, setAllProductos] = useState([]);
@@ -10,7 +12,7 @@ const ProductosList = () => {
   // Función para manejar la eliminación del producto
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`${urlBase}/${id}`, {
+      const response = await fetch(`${BASE_URL}/productos/productos/${id}`, {
         method: "DELETE",
       });
       if (response.ok) {
@@ -33,7 +35,7 @@ const ProductosList = () => {
   const getProductos = async () => {
     
     try {
-      const resuLtado = await fetch(urlBase);
+      const resuLtado = await fetch(`${BASE_URL}/productos/productos`);
       const data = await resuLtado.json();
       if (data) {
         setProductos(data);

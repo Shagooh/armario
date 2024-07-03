@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-const urlBase = "http://localhost:3000/productos"
+const BASE_URL = import.meta.env.VITE_BASE_URL;
+
 const ProductosForm = () => {
   const [titulo, setTitulo] = useState("");
 
@@ -16,7 +17,7 @@ const handleSubmit = async(e)=>{
     e.preventDefault()
     try {
         const body = { titulo, descripcion, img, caracteristicas, price, cantidad, usuario_id }
-        fetch(`${urlBase}/productos`, {
+        fetch(`${BASE_URL}/productos`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(body)

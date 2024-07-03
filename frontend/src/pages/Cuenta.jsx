@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 
+const BASE_URL = import.meta.env.VITE_BASE_URL;
+
 export default function Cuenta (){
 
     const [usuarios, setUsuarios] = useState([]);
 
     const getUsuarios = async () => {
         try {
-          const resuLtado = await fetch('http://localhost:3000/usuarios/usuarios/1');
+          const resuLtado = await fetch(`${BASE_URL}/usuarios/usuarios/1`);
           const data = await resuLtado.json();
           console.log(data)
           if (data) {

@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
+const BASE_URL = import.meta.env.VITE_BASE_URL;
+
 const ProductDetails = () => {
   const { id } = useParams();
   const [producto, setProducto] = useState(null);
@@ -12,7 +14,7 @@ const ProductDetails = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/productos/productos/${id}`);
+        const response = await axios.get(`${BASE_URL}/productos/productos/${id}`);
         setProducto(response.data);
       } catch (error) {
         console.error("Error fetching product details", error);

@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
+const BASE_URL = import.meta.env.VITE_BASE_URL;
+
 const UserForm = ({ fetchUsers, editingUser, setEditingUser }) => {
         const [nombre, setNombre] = useState('');
         const [email, setEmail] = useState('');
@@ -17,10 +19,10 @@ const UserForm = ({ fetchUsers, editingUser, setEditingUser }) => {
     const onSubmit = async (e) => {
         e.preventDefault();
         if (editingUser) {
-            await axios.put(`http://localhost:3000/usuarios/${editingUser.id}`, { nombre, email, contrasena });
+            await axios.put(`${BASE_URL}/${editingUser.id}`, { nombre, email, contrasena });
             setEditingUser(null);
         } else {
-            await axios.post('http://localhost:3000/usuarios', { nombre, email, contrasena });
+            await axios.post(`${BASE_URL}/usuarios`, { nombre, email, contrasena });
         }
         setNombre('');
         setEmail('');

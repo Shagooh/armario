@@ -3,12 +3,14 @@ import axios from 'axios';
 import UserForm from '../components/usuarios/UserForm';
 import UserGrid from '../components/usuarios/UserGrid';
 
+const BASE_URL = import.meta.env.VITE_BASE_URL;
+
 const Users = () => {
     const [users, setUsers] = useState([]);
     const [editingUser, setEditingUser] = useState(null);
 
     const fetchUsers = async () => {
-        const res = await axios.get('http://localhost:3000/usuarios/usuarios');
+        const res = await axios.get(`${BASE_URL}/usuarios/usuarios`);
         setUsers(res.data);
     };
 

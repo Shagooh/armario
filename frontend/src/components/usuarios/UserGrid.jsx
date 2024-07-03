@@ -1,9 +1,11 @@
 import React from 'react';
 import axios from 'axios';
 
+const BASE_URL = import.meta.env.VITE_BASE_URL;
+
 const UserGrid = ({ users, fetchUsers, setEditingUser }) => {
     const deleteUser = async (id) => {
-        await axios.delete(`http://localhost:3000/usuarios/${id}`);
+        await axios.delete(`${BASE_URL}/usuarios/${id}`);
         fetchUsers();
     };
 
