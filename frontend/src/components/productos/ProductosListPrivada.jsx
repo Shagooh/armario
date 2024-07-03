@@ -72,12 +72,14 @@ const ProductosListPrivada = () => {
               <Link
                 to={`/producto/${producto.id}`}
                 className="btn btn-primary m-3 rounded-xl"
+                style={{ background: "#64467e" , border: "none"}}
               >
                 Caracteristicas
               </Link>
               <button
                 className="btn btn-primary m-3"
                 onClick={() => alert("no puedes editar")}
+                style={{ background: "#ff86c3", border: "none" }}
               >
                 Editar
               </button>
